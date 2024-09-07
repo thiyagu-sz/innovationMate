@@ -36,6 +36,7 @@ import Grid from "@mui/material/Grid";
 import AppBar from "@mui/material/AppBar";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
+import { Link } from 'react-router-dom';
 
 // Soft UI Dashboard React components
 import SoftBox from "components/SoftBox";
@@ -56,6 +57,7 @@ import breakpoints from "assets/theme/base/breakpoints";
 // Images
 import Thiyagu from "assets/images/profile-pic.jpg";
 import curved0 from "assets/images/curved-images/curved0.jpg";
+import { IMPORT } from "stylis";
 
 function Header() {
   const [tabsOrientation, setTabsOrientation] = useState("horizontal");
@@ -143,7 +145,14 @@ function Header() {
                 onChange={handleSetTabValue}
                 sx={{ background: "transparent" }}
               >
-                <Tab label="App" icon={<Cube />} />
+                <Tab
+  label="Portfolio"
+  icon={<Cube />}
+  component={Link}
+  to="https://thiyaguprotfolio.netlify.app/"
+  target="_blank"
+  rel="noopener noreferrer"
+/>
                 <Tab label="Message" icon={<Document />} />
                 <Tab label="Settings" icon={<Settings />} />
               </Tabs>

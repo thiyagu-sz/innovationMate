@@ -13,6 +13,21 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
+/**
+=========================================================
+* Soft UI Dashboard React - v4.0.1
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
+* Copyright 2023 Creative Tim (https://www.creative-tim.com)
+
+Coded by www.creative-tim.com
+
+ =========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+*/
+
 import { useState, useEffect } from "react";
 
 // @mui material components
@@ -39,7 +54,7 @@ import Settings from "examples/Icons/Settings";
 import breakpoints from "assets/theme/base/breakpoints";
 
 // Images
-import burceMars from "assets/images/bruce-mars.jpg";
+import Thiyagu from "assets/images/profile-pic.jpg";
 import curved0 from "assets/images/curved-images/curved0.jpg";
 
 function Header() {
@@ -103,7 +118,7 @@ function Header() {
         <Grid container spacing={3} alignItems="center">
           <Grid item>
             <SoftAvatar
-              src={burceMars}
+              src={Thiyagu}
               alt="profile-image"
               variant="rounded"
               size="xl"

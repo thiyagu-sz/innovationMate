@@ -13,21 +13,6 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-/**
-=========================================================
-* Soft UI Dashboard React - v4.0.1
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 import { useState, useEffect } from "react";
 
 // @mui material components
@@ -36,7 +21,6 @@ import Grid from "@mui/material/Grid";
 import AppBar from "@mui/material/AppBar";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import { Link } from 'react-router-dom';
 
 // Soft UI Dashboard React components
 import SoftBox from "components/SoftBox";
@@ -55,9 +39,8 @@ import Settings from "examples/Icons/Settings";
 import breakpoints from "assets/theme/base/breakpoints";
 
 // Images
-import Thiyagu from "assets/images/profile-pic.jpg";
+import burceMars from "assets/images/bruce-mars.jpg";
 import curved0 from "assets/images/curved-images/curved0.jpg";
-import { IMPORT } from "stylis";
 
 function Header() {
   const [tabsOrientation, setTabsOrientation] = useState("horizontal");
@@ -120,7 +103,7 @@ function Header() {
         <Grid container spacing={3} alignItems="center">
           <Grid item>
             <SoftAvatar
-              src={Thiyagu}
+              src={burceMars}
               alt="profile-image"
               variant="rounded"
               size="xl"
@@ -130,10 +113,10 @@ function Header() {
           <Grid item>
             <SoftBox height="100%" mt={0.5} lineHeight={1}>
               <SoftTypography variant="h5" fontWeight="medium">
-                Thiyagu
+                Alex Thompson
               </SoftTypography>
               <SoftTypography variant="button" color="text" fontWeight="medium">
-                Developer / Founder
+                CEO / Co-Founder
               </SoftTypography>
             </SoftBox>
           </Grid>
@@ -145,14 +128,7 @@ function Header() {
                 onChange={handleSetTabValue}
                 sx={{ background: "transparent" }}
               >
-                <Tab
-  label="Portfolio"
-  icon={<Cube />}
-  component={Link}
-  to="https://thiyaguprotfolio.netlify.app/"
-  target="_blank"
-  rel="noopener noreferrer"
-/>
+                <Tab label="App" icon={<Cube />} />
                 <Tab label="Message" icon={<Document />} />
                 <Tab label="Settings" icon={<Settings />} />
               </Tabs>

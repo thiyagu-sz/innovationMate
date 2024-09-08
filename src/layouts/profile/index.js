@@ -62,12 +62,12 @@ function Overview() {
           <Grid item xs={12} md={6} xl={4}>
             <ProfileInfoCard
               title="profile information"
-              description="As a frontend developer, I specialize in JavaScript and React.js for creating dynamic, responsive user interfaces. I also excel in WordPress development, adept at customizing themes and plugins to deliver tailored website solutions. My diverse skill set enables me to build seamless web applications that ensure a positive user experience and effectively meet client needs"
+              description="Hi, I’m Alec Thompson, Decisions: If you can’t decide, the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality)."
               info={{
-                fullName: "thiyagu",
-                mobile: "9080214287",
-                email: "thiyaguai2004@mail.com",
-                location: "indaia",
+                fullName: "Alec M. Thompson",
+                mobile: "(44) 123 1234 123",
+                email: "alecthompson@mail.com",
+                location: "USA",
               }}
               social={[
                 {
@@ -81,7 +81,7 @@ function Overview() {
                   color: "twitter",
                 },
                 {
-                  link: "https://www.instagram.com/thiyagu_ig/",
+                  link: "https://www.instagram.com/creativetimofficial/",
                   icon: <InstagramIcon />,
                   color: "instagram",
                 },

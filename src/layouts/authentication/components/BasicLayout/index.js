@@ -36,8 +36,8 @@ function BasicLayout({ title, description, image, children }) {
       <DefaultNavbar
         action={{
           type: "external",
-          route: "https://creative-tim.com/product/soft-ui-dashboard-react",
-          label: "free download",
+          route: "https://thiyaguprotfolio.netlify.app/",
+          label: "Portfilo",
         }}
         transparent
         light

@@ -14,7 +14,7 @@ Coded by www.creative-tim.com
 */
 
 // Images
-import kal from "assets/images/kal-visuals-square.jpg";
+import kirii from "assets/images/kirii.jpg";
 import marie from "assets/images/marie.jpg";
 import ivana from "assets/images/ivana-square.jpg";
 import team3 from "assets/images/team-3.jpg";
@@ -22,9 +22,9 @@ import team4 from "assets/images/team-4.jpg";
 
 const profilesListData = [
   {
-    image: kal,
-    name: "Sophie B.",
-    description: "Hi! I need more information..",
+    image: kirii,
+    name: "hacker-kirii",
+    description: "bro game center polam",
     action: {
       type: "internal",
       route: "/pages/profile/profile-overview",
@@ -76,6 +76,7 @@ const profilesListData = [
       label: "reply",
     },
   },
+  
 ];
 
 export default profilesListData;

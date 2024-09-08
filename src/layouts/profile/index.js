@@ -18,7 +18,6 @@ import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 
 // @mui icons
-import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
@@ -62,26 +61,18 @@ function Overview() {
           <Grid item xs={12} md={6} xl={4}>
             <ProfileInfoCard
               title="profile information"
-              description="Hi, I’m Alec Thompson, Decisions: If you can’t decide, the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality)."
+              description="As a frontend developer, I specialize in JavaScript and React.js for creating dynamic, responsive user interfaces. I also excel in WordPress development, adept at customizing themes and plugins to deliver tailored website solutions. My diverse skill set enables me to build seamless web applications that ensure a positive user experience and effectively meet client needs"
               info={{
-                fullName: "Alec M. Thompson",
-                mobile: "(44) 123 1234 123",
-                email: "alecthompson@mail.com",
-                location: "USA",
+                fullName: "Thiyagu",
+                mobile: "9080214287",
+                email: "thiyaguai2003@mail.com",
+                location: "india tamilnadu vellore",
               }}
               social={[
+                
+            
                 {
-                  link: "https://www.facebook.com/CreativeTim/",
-                  icon: <FacebookIcon />,
-                  color: "facebook",
-                },
-                {
-                  link: "https://twitter.com/creativetim",
-                  icon: <TwitterIcon />,
-                  color: "twitter",
-                },
-                {
-                  link: "https://www.instagram.com/creativetimofficial/",
+                  link: "https://www.instagram.com/thiyagu_ig",
                   icon: <InstagramIcon />,
                   color: "instagram",
                 },

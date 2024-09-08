@@ -39,8 +39,9 @@ import Settings from "examples/Icons/Settings";
 import breakpoints from "assets/theme/base/breakpoints";
 
 // Images
-import burceMars from "assets/images/bruce-mars.jpg";
+import Thiyaguprofile from "assets/images/profile-pic.jpg";
 import curved0 from "assets/images/curved-images/curved0.jpg";
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [tabsOrientation, setTabsOrientation] = useState("horizontal");
@@ -103,7 +104,7 @@ function Header() {
         <Grid container spacing={3} alignItems="center">
           <Grid item>
             <SoftAvatar
-              src={burceMars}
+              src={Thiyaguprofile}
               alt="profile-image"
               variant="rounded"
               size="xl"
@@ -113,10 +114,10 @@ function Header() {
           <Grid item>
             <SoftBox height="100%" mt={0.5} lineHeight={1}>
               <SoftTypography variant="h5" fontWeight="medium">
-                Alex Thompson
+                Thiyagu
               </SoftTypography>
               <SoftTypography variant="button" color="text" fontWeight="medium">
-                CEO / Co-Founder
+                developer /Founder
               </SoftTypography>
             </SoftBox>
           </Grid>
@@ -128,7 +129,14 @@ function Header() {
                 onChange={handleSetTabValue}
                 sx={{ background: "transparent" }}
               >
-                <Tab label="App" icon={<Cube />} />
+                <Tab
+  label="Portfolio"
+  icon={<Cube />}
+  component={Link}
+  to="https://thiyaguprotfolio.netlify.app/"
+  target="_blank"
+  rel="noopener noreferrer"
+/>
                 <Tab label="Message" icon={<Document />} />
                 <Tab label="Settings" icon={<Settings />} />
               </Tabs>

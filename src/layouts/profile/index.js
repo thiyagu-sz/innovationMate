@@ -41,7 +41,8 @@ import PlatformSettings from "layouts/profile/components/PlatformSettings";
 import profilesListData from "layouts/profile/data/profilesListData";
 
 // Images
-import homeDecor1 from "assets/images/home-decor-1.jpg";
+import Thiyaguprofile from "assets/images/profile-pic.jpg";
+import project1 from"assets/images/pro1.jpg";
 import homeDecor2 from "assets/images/home-decor-2.jpg";
 import homeDecor3 from "assets/images/home-decor-3.jpg";
 import team1 from "assets/images/team-1.jpg";
@@ -95,7 +96,7 @@ function Overview() {
             </SoftBox>
             <SoftBox mb={1}>
               <SoftTypography variant="button" fontWeight="regular" color="text">
-                Architects design houses
+                 3D protfolio 
               </SoftTypography>
             </SoftBox>
           </SoftBox>
@@ -103,7 +104,7 @@ function Overview() {
             <Grid container spacing={3}>
               <Grid item xs={12} md={6} xl={3}>
                 <DefaultProjectCard
-                  image={homeDecor1}
+                  image={project1}
                   label="project #2"
                   title="modern"
                   description="As Uber works through a huge amount of internal management turmoil."
@@ -114,13 +115,15 @@ function Overview() {
                     label: "view project",
                   }}
                   authors={[
-                    { image: team1, name: "Elena Morison" },
-                    { image: team2, name: "Ryan Milly" },
-                    { image: team3, name: "Nick Daniel" },
-                    { image: team4, name: "Peterson" },
+
+                    { image: Thiyaguprofile, name: "THIYAGU" },
+                    
+                    
                   ]}
                 />
               </Grid>
+        
+              
               <Grid item xs={12} md={6} xl={3}>
                 <DefaultProjectCard
                   image={homeDecor2}
@@ -134,7 +137,7 @@ function Overview() {
                     label: "view project",
                   }}
                   authors={[
-                    { image: team3, name: "Nick Daniel" },
+                    { image: team1, name: "Nick Daniel" },
                     { image: team4, name: "Peterson" },
                     { image: team1, name: "Elena Morison" },
                     { image: team2, name: "Ryan Milly" },

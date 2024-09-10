@@ -15,7 +15,7 @@ Coded by www.creative-tim.com
 
 // Images
 import kirii from "assets/images/kirii.jpg";
-import marie from "assets/images/marie.jpg";
+import keerthi from "assets/images/keerthi.jpg";
 import ivana from "assets/images/ivana-square.jpg";
 import team3 from "assets/images/team-3.jpg";
 import team4 from "assets/images/team-4.jpg";
@@ -33,9 +33,9 @@ const profilesListData = [
     },
   },
   {
-    image: marie,
-    name: "Anne Marie",
-    description: "Awesome work, can you..",
+    image: keerthi,
+    name: "kerrthi",
+    description: "hi bro",
     action: {
       type: "internal",
       route: "/pages/profile/profile-overview",

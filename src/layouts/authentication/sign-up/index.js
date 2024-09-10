@@ -1,45 +1,48 @@
-/**
-=========================================================
-* Soft UI Dashboard React - v4.0.1
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 import { useState } from "react";
-
-// react-router-dom components
-import { Link } from "react-router-dom";
-
-// @mui material components
+import { Link, useNavigate } from "react-router-dom";
 import Card from "@mui/material/Card";
 import Checkbox from "@mui/material/Checkbox";
-
-// Soft UI Dashboard React components
 import SoftBox from "components/SoftBox";
 import SoftTypography from "components/SoftTypography";
 import SoftInput from "components/SoftInput";
 import SoftButton from "components/SoftButton";
-
-// Authentication layout components
 import BasicLayout from "layouts/authentication/components/BasicLayout";
 import Socials from "layouts/authentication/components/Socials";
 import Separator from "layouts/authentication/components/Separator";
-
-// Images
 import curved6 from "assets/images/curved-images/curved14.jpg";
 
 function SignUp() {
-  const [agreement, setAgremment] = useState(true);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [agreement, setAgreement] = useState(true);
+  const [errors, setErrors] = useState({});
+  const navigate = useNavigate();
 
-  const handleSetAgremment = () => setAgremment(!agreement);
+  const handleSetAgreement = () => setAgreement(!agreement);
+
+  const validateForm = () => {
+    const newErrors = {};
+    if (!name) newErrors.name = "Name is required.";
+    if (!email) newErrors.email = "Email is required.";
+    else if (!/\S+@\S+\.\S+/.test(email)) newErrors.email = "Email is invalid.";
+    if (!password) newErrors.password = "Password is required.";
+    else if (password.length < 6)
+      newErrors.password = "Password must be at least 6 characters.";
+    if (!agreement) newErrors.agreement = "You must agree to the terms.";
+    return newErrors;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formErrors = validateForm();
+    if (Object.keys(formErrors).length === 0) {
+      // If no errors, redirect to the sign-in page
+      navigate("/authentication/sign-in");
+    } else {
+      setErrors(formErrors);
+    }
+  };
 
   return (
     <BasicLayout
@@ -58,25 +61,57 @@ function SignUp() {
         </SoftBox>
         <Separator />
         <SoftBox pt={2} pb={3} px={3}>
-          <SoftBox component="form" role="form">
+          <SoftBox component="form" role="form" onSubmit={handleSubmit}>
             <SoftBox mb={2}>
-              <SoftInput placeholder="Name" />
+              <SoftInput
+                placeholder="Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                error={!!errors.name}
+              />
+              {errors.name && (
+                <SoftTypography variant="caption" color="error">
+                  {errors.name}
+                </SoftTypography>
+              )}
             </SoftBox>
             <SoftBox mb={2}>
-              <SoftInput type="email" placeholder="Email" />
+              <SoftInput
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                error={!!errors.email}
+              />
+              {errors.email && (
+                <SoftTypography variant="caption" color="error">
+                  {errors.email}
+                </SoftTypography>
+              )}
             </SoftBox>
             <SoftBox mb={2}>
-              <SoftInput type="password" placeholder="Password" />
+              <SoftInput
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                error={!!errors.password}
+              />
+              {errors.password && (
+                <SoftTypography variant="caption" color="error">
+                  {errors.password}
+                </SoftTypography>
+              )}
             </SoftBox>
             <SoftBox display="flex" alignItems="center">
-              <Checkbox checked={agreement} onChange={handleSetAgremment} />
+              <Checkbox checked={agreement} onChange={handleSetAgreement} />
               <SoftTypography
                 variant="button"
                 fontWeight="regular"
-                onClick={handleSetAgremment}
-                sx={{ cursor: "poiner", userSelect: "none" }}
+                onClick={handleSetAgreement}
+                sx={{ cursor: "pointer", userSelect: "none" }}
               >
-                &nbsp;&nbsp;I agree the&nbsp;
+                &nbsp;&nbsp;I agree to the&nbsp;
               </SoftTypography>
               <SoftTypography
                 component="a"
@@ -87,10 +122,15 @@ function SignUp() {
               >
                 Terms and Conditions
               </SoftTypography>
+              {errors.agreement && (
+                <SoftTypography variant="caption" color="error">
+                  {errors.agreement}
+                </SoftTypography>
+              )}
             </SoftBox>
             <SoftBox mt={4} mb={1}>
-              <SoftButton variant="gradient" color="dark" fullWidth>
-                sign up
+              <SoftButton variant="gradient" color="dark" fullWidth type="submit">
+                Sign up
               </SoftButton>
             </SoftBox>
             <SoftBox mt={3} textAlign="center">

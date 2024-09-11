@@ -44,6 +44,7 @@ function ExpertOn({ job, org }) {
 const guidesTableData = {
   columns: [
     { name: "guide", align: "left" },
+    { name: "collage", align: "center" },  // Moved the "collage" column to the right of "guide"
     { name: "expert on", align: "left" },
     { name: "status", align: "center" },
     { name: "cabin number", align: "center" },
@@ -52,7 +53,12 @@ const guidesTableData = {
 
   rows: [
     {
-      guide: <Guide image={team4} name="Shunmuga Perumal p"  email="shunmugaperumal.p@vit.ac.in" />,
+      guide: <Guide image={team4} name="Shunmuga Perumal p" email="shunmugaperumal.p@vit.ac.in" />,
+      collage: (
+        <SoftTypography variant="caption" color="secondary">
+          VIT
+        </SoftTypography>
+      ),
       "expert on": <ExpertOn job="Mobile Applications" org="Development" />,
       status: (
         <SoftBadge variant="gradient" badgeContent="online" color="success" size="xs" container />
@@ -76,6 +82,11 @@ const guidesTableData = {
     },
     {
       guide: <Guide image={team3} name="Alexa Liras" email="alexa@creative-tim.com" />,
+      collage: (
+        <SoftTypography variant="caption" color="secondary">
+          VIT
+        </SoftTypography>
+      ),
       "expert on": <ExpertOn job="Web Development" org="Developer" />,
       status: (
         <SoftBadge variant="gradient" badgeContent="offline" color="secondary" size="xs" container />
@@ -99,6 +110,11 @@ const guidesTableData = {
     },
     {
       guide: <Guide image={team4} name="Laurent Perrier" email="laurent@creative-tim.com" />,
+      collage: (
+        <SoftTypography variant="caption" color="secondary">
+          VIT
+        </SoftTypography>
+      ),
       "expert on": <ExpertOn job="Cloud Computing" org="Projects" />,
       status: (
         <SoftBadge variant="gradient" badgeContent="online" color="success" size="xs" container />
@@ -122,6 +138,11 @@ const guidesTableData = {
     },
     {
       guide: <Guide image={team3} name="Michael Levi" email="michael@creative-tim.com" />,
+      collage: (
+        <SoftTypography variant="caption" color="secondary">
+          VIT
+        </SoftTypography>
+      ),
       "expert on": <ExpertOn job="Database Management" org="Developer" />,
       status: (
         <SoftBadge variant="gradient" badgeContent="online" color="success" size="xs" container />
@@ -145,6 +166,11 @@ const guidesTableData = {
     },
     {
       guide: <Guide image={team2} name="Richard Gran" email="richard@creative-tim.com" />,
+      collage: (
+        <SoftTypography variant="caption" color="secondary">
+          VIT
+        </SoftTypography>
+      ),
       "expert on": <ExpertOn job="AI & ML" org="Executive" />,
       status: (
         <SoftBadge variant="gradient" badgeContent="offline" color="secondary" size="xs" container />
@@ -168,6 +194,11 @@ const guidesTableData = {
     },
     {
       guide: <Guide image={team4} name="Miriam Eric" email="miriam@creative-tim.com" />,
+      collage: (
+        <SoftTypography variant="caption" color="secondary">
+          VIT
+        </SoftTypography>
+      ),
       "expert on": <ExpertOn job="Cybersecurity" org="Developer" />,
       status: (
         <SoftBadge variant="gradient" badgeContent="offline" color="secondary" size="xs" container />

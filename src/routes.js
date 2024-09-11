@@ -56,7 +56,7 @@ import CreditCard from "examples/Icons/CreditCard";
 import Cube from "examples/Icons/Cube";
 
 const routes = [
-  {
+ {
     type: "collapse",
     name: "Dashboard",
     key: "dashboard",
@@ -67,7 +67,7 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Tables",
+    name: "FindMYGuide",
     key: "tables",
     route: "/tables",
     icon: <Office size="12px" />,

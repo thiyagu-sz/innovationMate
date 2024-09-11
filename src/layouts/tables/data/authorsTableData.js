@@ -10,7 +10,7 @@ import team2 from "assets/images/team-2.jpg";
 import team3 from "assets/images/team-3.jpg";
 import team4 from "assets/images/team-4.jpg";
 
-function Author({ image, name, email }) {
+function Guide({ image, name, email }) {
   return (
     <SoftBox display="flex" alignItems="center" px={1} py={0.5}>
       <SoftBox mr={2}>
@@ -28,7 +28,7 @@ function Author({ image, name, email }) {
   );
 }
 
-function Function({ job, org }) {
+function ExpertOn({ job, org }) {
   return (
     <SoftBox display="flex" flexDirection="column">
       <SoftTypography variant="caption" fontWeight="medium" color="text">
@@ -41,28 +41,28 @@ function Function({ job, org }) {
   );
 }
 
-const authorsTableData = {
+const guidesTableData = {
   columns: [
-    { name: "author", align: "left" },
-    { name: "function", align: "left" },
+    { name: "guide", align: "left" },
+    { name: "expert on", align: "left" },
     { name: "status", align: "center" },
-    { name: "employed", align: "center" },
-    { name: "action", align: "center" },
+    { name: "cabin number", align: "center" },
+    { name: "meeting", align: "center" },
   ],
 
   rows: [
     {
-      author: <Author image={team2} name="John Michael" email="john@creative-tim.com" />,
-      function: <Function job="Manager" org="Organization" />,
+      guide: <Guide image={team4} name="Shunmuga Perumal p"  email="shunmugaperumal.p@vit.ac.in" />,
+      "expert on": <ExpertOn job="Mobile Applications" org="Development" />,
       status: (
         <SoftBadge variant="gradient" badgeContent="online" color="success" size="xs" container />
       ),
-      employed: (
+      "cabin number": (
         <SoftTypography variant="caption" color="secondary" fontWeight="medium">
-          23/04/18
+          SJT 621
         </SoftTypography>
       ),
-      action: (
+      meeting: (
         <SoftTypography
           component="a"
           href="#"
@@ -70,22 +70,22 @@ const authorsTableData = {
           color="secondary"
           fontWeight="medium"
         >
-          Edit
+          Request Meeting
         </SoftTypography>
       ),
     },
     {
-      author: <Author image={team3} name="Alexa Liras" email="alexa@creative-tim.com" />,
-      function: <Function job="Programator" org="Developer" />,
+      guide: <Guide image={team3} name="Alexa Liras" email="alexa@creative-tim.com" />,
+      "expert on": <ExpertOn job="Web Development" org="Developer" />,
       status: (
         <SoftBadge variant="gradient" badgeContent="offline" color="secondary" size="xs" container />
       ),
-      employed: (
+      "cabin number": (
         <SoftTypography variant="caption" color="secondary" fontWeight="medium">
-          11/01/19
+          SJT 523
         </SoftTypography>
       ),
-      action: (
+      meeting: (
         <SoftTypography
           component="a"
           href="#"
@@ -93,22 +93,22 @@ const authorsTableData = {
           color="secondary"
           fontWeight="medium"
         >
-          Edit
+          Request Meeting
         </SoftTypography>
       ),
     },
     {
-      author: <Author image={team4} name="Laurent Perrier" email="laurent@creative-tim.com" />,
-      function: <Function job="Executive" org="Projects" />,
+      guide: <Guide image={team4} name="Laurent Perrier" email="laurent@creative-tim.com" />,
+      "expert on": <ExpertOn job="Cloud Computing" org="Projects" />,
       status: (
         <SoftBadge variant="gradient" badgeContent="online" color="success" size="xs" container />
       ),
-      employed: (
+      "cabin number": (
         <SoftTypography variant="caption" color="secondary" fontWeight="medium">
-          19/09/17
+          SJT 333
         </SoftTypography>
       ),
-      action: (
+      meeting: (
         <SoftTypography
           component="a"
           href="#"
@@ -116,22 +116,22 @@ const authorsTableData = {
           color="secondary"
           fontWeight="medium"
         >
-          Edit
+          Request Meeting
         </SoftTypography>
       ),
     },
     {
-      author: <Author image={team3} name="Michael Levi" email="michael@creative-tim.com" />,
-      function: <Function job="Programator" org="Developer" />,
+      guide: <Guide image={team3} name="Michael Levi" email="michael@creative-tim.com" />,
+      "expert on": <ExpertOn job="Database Management" org="Developer" />,
       status: (
         <SoftBadge variant="gradient" badgeContent="online" color="success" size="xs" container />
       ),
-      employed: (
+      "cabin number": (
         <SoftTypography variant="caption" color="secondary" fontWeight="medium">
-          24/12/08
+          SJT 445
         </SoftTypography>
       ),
-      action: (
+      meeting: (
         <SoftTypography
           component="a"
           href="#"
@@ -139,22 +139,22 @@ const authorsTableData = {
           color="secondary"
           fontWeight="medium"
         >
-          Edit
+          Request Meeting
         </SoftTypography>
       ),
     },
     {
-      author: <Author image={team2} name="Richard Gran" email="richard@creative-tim.com" />,
-      function: <Function job="Manager" org="Executive" />,
+      guide: <Guide image={team2} name="Richard Gran" email="richard@creative-tim.com" />,
+      "expert on": <ExpertOn job="AI & ML" org="Executive" />,
       status: (
         <SoftBadge variant="gradient" badgeContent="offline" color="secondary" size="xs" container />
       ),
-      employed: (
+      "cabin number": (
         <SoftTypography variant="caption" color="secondary" fontWeight="medium">
-          04/10/21
+          SJT 102
         </SoftTypography>
       ),
-      action: (
+      meeting: (
         <SoftTypography
           component="a"
           href="#"
@@ -162,22 +162,22 @@ const authorsTableData = {
           color="secondary"
           fontWeight="medium"
         >
-          Edit
+          Request Meeting
         </SoftTypography>
       ),
     },
     {
-      author: <Author image={team4} name="Miriam Eric" email="miriam@creative-tim.com" />,
-      function: <Function job="Programtor" org="Developer" />,
+      guide: <Guide image={team4} name="Miriam Eric" email="miriam@creative-tim.com" />,
+      "expert on": <ExpertOn job="Cybersecurity" org="Developer" />,
       status: (
         <SoftBadge variant="gradient" badgeContent="offline" color="secondary" size="xs" container />
       ),
-      employed: (
+      "cabin number": (
         <SoftTypography variant="caption" color="secondary" fontWeight="medium">
-          14/09/20
+          SJT 212
         </SoftTypography>
       ),
-      action: (
+      meeting: (
         <SoftTypography
           component="a"
           href="#"
@@ -185,11 +185,11 @@ const authorsTableData = {
           color="secondary"
           fontWeight="medium"
         >
-          Edit
+          Request Meeting
         </SoftTypography>
       ),
     },
   ],
 };
 
-export default authorsTableData;
+export default guidesTableData;

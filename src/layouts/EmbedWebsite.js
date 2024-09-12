@@ -14,11 +14,11 @@ const EmbedWebsite = () => {
       p={3}
     >
       <SoftTypography variant="h4" mb={3}>
-        Embedded eLearning Website
+        Find Our Teammate
       </SoftTypography>
       <SoftBox
         component="iframe"
-        src="https://elearning-thiyagu.netlify.app/"
+        src="https://innovationmatebs-thiyagu.netlify.app/"
         width="100%"
         height="90vh"
         border="none"

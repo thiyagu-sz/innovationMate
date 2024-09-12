@@ -39,7 +39,7 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Embed Website",
+    name: "FindMYTeammate",
     key: "embed-website",
     route: "/embed-website",
     icon: <Office size="12px" />,

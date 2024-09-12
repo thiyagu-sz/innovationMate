@@ -9,6 +9,7 @@ import SoftBadge from "components/SoftBadge";
 import team2 from "assets/images/team-2.jpg";
 import team3 from "assets/images/team-3.jpg";
 import team4 from "assets/images/team-4.jpg";
+import spprof from "assets/images/spproof.jpg";
 
 function Guide({ image, name, email }) {
   return (
@@ -41,10 +42,12 @@ function ExpertOn({ job, org }) {
   );
 }
 
+// Add the rating to the columns array
 const guidesTableData = {
   columns: [
     { name: "guide", align: "left" },
-    { name: "collage", align: "center" },  // Moved the "collage" column to the right of "guide"
+    { name: "collage", align: "center" },
+    { name: "rating", align: "center" },  // New rating column
     { name: "expert on", align: "left" },
     { name: "status", align: "center" },
     { name: "cabin number", align: "center" },
@@ -53,12 +56,17 @@ const guidesTableData = {
 
   rows: [
     {
-      guide: <Guide image={team4} name="Shunmuga Perumal p" email="shunmugaperumal.p@vit.ac.in" />,
+      guide: <Guide image={spprof} name="Shunmuga Perumal" email="shunmugaperumal.p@vit.ac.in" />,
       collage: (
         <SoftTypography variant="caption" color="secondary">
-          VIT
+          VIT Vellore
         </SoftTypography>
       ),
+      rating: (
+        <SoftTypography variant="caption" color="secondary">
+          ★★★★★
+        </SoftTypography>
+      ),  // New rating field
       "expert on": <ExpertOn job="Mobile Applications" org="Development" />,
       status: (
         <SoftBadge variant="gradient" badgeContent="online" color="success" size="xs" container />
@@ -84,16 +92,21 @@ const guidesTableData = {
       guide: <Guide image={team3} name="Alexa Liras" email="alexa@creative-tim.com" />,
       collage: (
         <SoftTypography variant="caption" color="secondary">
-          VIT
+          SRM
         </SoftTypography>
       ),
+      rating: (
+        <SoftTypography variant="caption" color="secondary">
+          ★★★★☆
+        </SoftTypography>
+      ),  // New rating field
       "expert on": <ExpertOn job="Web Development" org="Developer" />,
       status: (
         <SoftBadge variant="gradient" badgeContent="offline" color="secondary" size="xs" container />
       ),
       "cabin number": (
         <SoftTypography variant="caption" color="secondary" fontWeight="medium">
-          SJT 523
+          SRM block7 523
         </SoftTypography>
       ),
       meeting: (
@@ -112,16 +125,21 @@ const guidesTableData = {
       guide: <Guide image={team4} name="Laurent Perrier" email="laurent@creative-tim.com" />,
       collage: (
         <SoftTypography variant="caption" color="secondary">
-          VIT
+          IIT bombai
         </SoftTypography>
       ),
+      rating: (
+        <SoftTypography variant="caption" color="secondary">
+          ★★★★★
+        </SoftTypography>
+      ),  // New rating field
       "expert on": <ExpertOn job="Cloud Computing" org="Projects" />,
       status: (
         <SoftBadge variant="gradient" badgeContent="online" color="success" size="xs" container />
       ),
       "cabin number": (
         <SoftTypography variant="caption" color="secondary" fontWeight="medium">
-          SJT 333
+          IIIB block1 333
         </SoftTypography>
       ),
       meeting: (
@@ -140,16 +158,21 @@ const guidesTableData = {
       guide: <Guide image={team3} name="Michael Levi" email="michael@creative-tim.com" />,
       collage: (
         <SoftTypography variant="caption" color="secondary">
-          VIT
+          MIT
         </SoftTypography>
       ),
+      rating: (
+        <SoftTypography variant="caption" color="secondary">
+          ★★★★☆
+        </SoftTypography>
+      ),  // New rating field
       "expert on": <ExpertOn job="Database Management" org="Developer" />,
       status: (
         <SoftBadge variant="gradient" badgeContent="online" color="success" size="xs" container />
       ),
       "cabin number": (
         <SoftTypography variant="caption" color="secondary" fontWeight="medium">
-          SJT 445
+          MIT bockQ 445
         </SoftTypography>
       ),
       meeting: (
@@ -171,6 +194,11 @@ const guidesTableData = {
           VIT
         </SoftTypography>
       ),
+      rating: (
+        <SoftTypography variant="caption" color="secondary">
+          ★★★☆☆
+        </SoftTypography>
+      ),  // New rating field
       "expert on": <ExpertOn job="AI & ML" org="Executive" />,
       status: (
         <SoftBadge variant="gradient" badgeContent="offline" color="secondary" size="xs" container />
@@ -199,6 +227,11 @@ const guidesTableData = {
           VIT
         </SoftTypography>
       ),
+      rating: (
+        <SoftTypography variant="caption" color="secondary">
+          ★★★☆☆
+        </SoftTypography>
+      ),  // New rating field
       "expert on": <ExpertOn job="Cybersecurity" org="Developer" />,
       status: (
         <SoftBadge variant="gradient" badgeContent="offline" color="secondary" size="xs" container />

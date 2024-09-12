@@ -20,7 +20,7 @@ function SignIn() {
   // Validation function
   const handleSignIn = () => {
     if (email === "thiyagu" && password === "pass") {
-      navigate("/dashboard"); // Redirect to dashboard
+      navigate("/profile"); // Redirect to dashboard
     } else {
       setError("Invalid email or password");
     }
@@ -28,7 +28,7 @@ function SignIn() {
 
   return (
     <CoverLayout
-      title="Welcome back"
+      title="Welcome back InnovationMate"
       description="Enter your email and password to sign in"
       image={curved9}
     >
@@ -36,12 +36,12 @@ function SignIn() {
         <SoftBox mb={2}>
           <SoftBox mb={1} ml={0.5}>
             <SoftTypography component="label" variant="caption" fontWeight="bold">
-              Email
+              Name
             </SoftTypography>
           </SoftBox>
           <SoftInput
             type="text"
-            placeholder="Email"
+            placeholder="Name"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />

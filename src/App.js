@@ -71,7 +71,7 @@ export default function App() {
               <Sidenav
                 color={sidenavColor}
                 brand={brand}
-                brandName="Soft UI Dashboard"
+                brandName="InnovationMate"
                 routes={routes}
                 onMouseEnter={handleOnMouseEnter}
                 onMouseLeave={handleOnMouseLeave}
@@ -80,7 +80,7 @@ export default function App() {
           )}
           <Routes>
             {getRoutes(routes)}
-            <Route path="*" element={<Navigate to="/dashboard" />} />
+            <Route path="*" element={<Navigate to="/profile" />} />
           </Routes>
         </>
       )}

@@ -19,13 +19,23 @@ import CreditCard from "examples/Icons/CreditCard";
 import Cube from "examples/Icons/Cube";
 
 const routes = [
-  {
+  /**{
     type: "collapse",
     name: "Dashboard",
     key: "dashboard",
     route: "/dashboard",
     icon: <Shop size="12px" />,
     component: <Dashboard />,
+    noCollapse: true,
+  },*/
+
+  {
+    type: "collapse",
+    name: "Profile",
+    key: "profile",
+    route: "/profile",
+    icon: <CustomerSupport size="12px" />,
+    component: <Profile />,
     noCollapse: true,
   },
   {
@@ -55,7 +65,7 @@ const routes = [
     component: <Billing />,
     noCollapse: true,
   },
-  {
+ /** {
     type: "collapse",
     name: "Virtual Reality",
     key: "virtual-reality",
@@ -63,8 +73,8 @@ const routes = [
     icon: <Cube size="12px" />,
     component: <VirtualReality />,
     noCollapse: true,
-  },
-  {
+  },*/
+ /**  {
     type: "collapse",
     name: "RTL",
     key: "rtl",
@@ -72,17 +82,9 @@ const routes = [
     icon: <Settings size="12px" />,
     component: <RTL />,
     noCollapse: true,
-  },
+  },*/
   { type: "title", title: "Account Pages", key: "account-pages" },
-  {
-    type: "collapse",
-    name: "Profile",
-    key: "profile",
-    route: "/profile",
-    icon: <CustomerSupport size="12px" />,
-    component: <Profile />,
-    noCollapse: true,
-  },
+  
   {
     type: "collapse",
     name: "Sign In",

@@ -47,7 +47,7 @@ function SignUp() {
   return (
     <BasicLayout
       title="Welcome!"
-      description="Use these awesome forms to login or create new account in your project for free."
+      description="FindMyTeamMeat is an innovative platform designed to connect individuals seeking teammates, sponsors, and technical guides for startups and college projects."
       image={curved6}
     >
       <Card>

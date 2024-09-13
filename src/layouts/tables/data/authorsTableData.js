@@ -10,6 +10,8 @@ import team2 from "assets/images/team-2.jpg";
 import team3 from "assets/images/team-3.jpg";
 import team4 from "assets/images/team-4.jpg";
 import spprof from "assets/images/spproof.jpg";
+import kar from "assets/images/kar.jpg";
+import aru from "assets/images/arun.jpg"
 
 function Guide({ image, name, email }) {
   return (
@@ -89,18 +91,18 @@ const guidesTableData = {
       ),
     },
     {
-      guide: <Guide image={team3} name="Alexa Liras" email="alexa@creative-tim.com" />,
+      guide: <Guide image={kar} name="Karthikeyan " email="pkarthikeyn@vit@.ac.in" />,
       collage: (
         <SoftTypography variant="caption" color="secondary">
-          SRM
+          VIT vellore
         </SoftTypography>
       ),
       rating: (
         <SoftTypography variant="caption" color="secondary">
           ★★★★☆
         </SoftTypography>
-      ),  // New rating field
-      "expert on": <ExpertOn job="Web Development" org="Developer" />,
+      ),  
+      "expert on": <ExpertOn job="Data baseManagement" org="Developer" />,
       status: (
         <SoftBadge variant="gradient" badgeContent="offline" color="secondary" size="xs" container />
       ),
@@ -121,39 +123,7 @@ const guidesTableData = {
         </SoftTypography>
       ),
     },
-    {
-      guide: <Guide image={team4} name="Laurent Perrier" email="laurent@creative-tim.com" />,
-      collage: (
-        <SoftTypography variant="caption" color="secondary">
-          IIT bombai
-        </SoftTypography>
-      ),
-      rating: (
-        <SoftTypography variant="caption" color="secondary">
-          ★★★★★
-        </SoftTypography>
-      ),  // New rating field
-      "expert on": <ExpertOn job="Cloud Computing" org="Projects" />,
-      status: (
-        <SoftBadge variant="gradient" badgeContent="online" color="success" size="xs" container />
-      ),
-      "cabin number": (
-        <SoftTypography variant="caption" color="secondary" fontWeight="medium">
-          IIIB block1 333
-        </SoftTypography>
-      ),
-      meeting: (
-        <SoftTypography
-          component="a"
-          href="#"
-          variant="caption"
-          color="secondary"
-          fontWeight="medium"
-        >
-          Request Meeting
-        </SoftTypography>
-      ),
-    },
+    
     {
       guide: <Guide image={team3} name="Michael Levi" email="michael@creative-tim.com" />,
       collage: (
@@ -173,6 +143,39 @@ const guidesTableData = {
       "cabin number": (
         <SoftTypography variant="caption" color="secondary" fontWeight="medium">
           MIT bockQ 445
+        </SoftTypography>
+      ),
+      meeting: (
+        <SoftTypography
+          component="a"
+          href="#"
+          variant="caption"
+          color="secondary"
+          fontWeight="medium"
+        >
+          Request Meeting
+        </SoftTypography>
+      ),
+    },
+    {
+      guide: <Guide image={aru} name="Arun pandian " email="arun pandian.j@vit.ac.in" />,
+      collage: (
+        <SoftTypography variant="caption" color="secondary">
+          VIT vellore
+        </SoftTypography>
+      ),
+      rating: (
+        <SoftTypography variant="caption" color="secondary">
+          ★★★★★
+        </SoftTypography>
+      ),  // New rating field
+      "expert on": <ExpertOn job="Data Base" org="Projects" />,
+      status: (
+        <SoftBadge variant="gradient" badgeContent="online" color="success" size="xs" container />
+      ),
+      "cabin number": (
+        <SoftTypography variant="caption" color="secondary" fontWeight="medium">
+          PRP block 317 E
         </SoftTypography>
       ),
       meeting: (

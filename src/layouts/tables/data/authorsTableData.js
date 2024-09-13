@@ -13,7 +13,7 @@ import spprof from "assets/images/spproof.jpg";
 import kar from "assets/images/kar.jpg";
 import aru from "assets/images/arun.jpg"
 import anbupro from "assets/images/anbu.jpg"
-
+import  anbus from "assets/images/anbus.jpg";
 function Guide({ image, name, email }) {
   return (
     <SoftBox display="flex" alignItems="center" px={1} py={0.5}>
@@ -192,10 +192,10 @@ const guidesTableData = {
       ),
     },
     {
-      guide: <Guide image={team2} name="Richard Gran" email="richard@creative-tim.com" />,
+      guide: <Guide image={anbus} name="AnbursuKuamr" email="anbarasakumar.a@vit.ac.in" />,
       collage: (
         <SoftTypography variant="caption" color="secondary">
-          VIT
+          VIT  vellore
         </SoftTypography>
       ),
       rating: (
@@ -209,7 +209,7 @@ const guidesTableData = {
       ),
       "cabin number": (
         <SoftTypography variant="caption" color="secondary" fontWeight="medium">
-          SJT 102
+          SJT 213
         </SoftTypography>
       ),
       meeting: (

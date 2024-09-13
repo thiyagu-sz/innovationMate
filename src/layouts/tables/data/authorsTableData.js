@@ -63,7 +63,7 @@ const guidesTableData = {
       guide: <Guide image={spprof} name="Shunmuga Perumal" email="shunmugaperumal.p@vit.ac.in" />,
       collage: (
         <SoftTypography variant="caption" color="secondary">
-          VIT Vellore
+          VIT chennai 
         </SoftTypography>
       ),
       rating: (

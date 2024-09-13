@@ -14,6 +14,7 @@ import kar from "assets/images/kar.jpg";
 import aru from "assets/images/arun.jpg"
 import anbupro from "assets/images/anbu.jpg"
 import  anbus from "assets/images/anbus.jpg";
+import srmf from "assets/images/srmfac.jpg"
 function Guide({ image, name, email }) {
   return (
     <SoftBox display="flex" alignItems="center" px={1} py={0.5}>
@@ -103,7 +104,7 @@ const guidesTableData = {
           ★★★★☆
         </SoftTypography>
       ),  
-      "expert on": <ExpertOn job="Data baseManagement" org="Developer" />,
+      "expert on": <ExpertOn job="Data baseManagement" org="Proffecr" />,
       status: (
         <SoftBadge variant="gradient" badgeContent="offline" color="secondary" size="xs" container />
       ),
@@ -126,10 +127,10 @@ const guidesTableData = {
     },
     
     {
-      guide: <Guide image={team3} name="Michael Levi" email="michael@creative-tim.com" />,
+      guide: <Guide image={srmf} name="Duraisaai" email="duraisaa@srmist.edu.in" />,
       collage: (
         <SoftTypography variant="caption" color="secondary">
-          MIT
+          SRM 
         </SoftTypography>
       ),
       rating: (
@@ -137,7 +138,7 @@ const guidesTableData = {
           ★★★★☆
         </SoftTypography>
       ),  // New rating field
-      "expert on": <ExpertOn job="Database Management" org="Developer" />,
+      "expert on": <ExpertOn job="Economist" org="Developer" />,
       status: (
         <SoftBadge variant="gradient" badgeContent="online" color="success" size="xs" container />
       ),

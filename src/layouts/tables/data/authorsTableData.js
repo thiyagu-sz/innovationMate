@@ -12,6 +12,7 @@ import team4 from "assets/images/team-4.jpg";
 import spprof from "assets/images/spproof.jpg";
 import kar from "assets/images/kar.jpg";
 import aru from "assets/images/arun.jpg"
+import anbupro from "assets/images/anbu.jpg"
 
 function Guide({ image, name, email }) {
   return (
@@ -224,10 +225,10 @@ const guidesTableData = {
       ),
     },
     {
-      guide: <Guide image={team4} name="Miriam Eric" email="miriam@creative-tim.com" />,
+      guide: <Guide image={anbupro} name="Anduarsu" email="anbarasu.b@vit.ac.in" />,
       collage: (
         <SoftTypography variant="caption" color="secondary">
-          VIT
+          VIT vellore
         </SoftTypography>
       ),
       rating: (
@@ -235,7 +236,7 @@ const guidesTableData = {
           ★★★☆☆
         </SoftTypography>
       ),  // New rating field
-      "expert on": <ExpertOn job="Cybersecurity" org="Developer" />,
+      "expert on": <ExpertOn job="Programming in c" org="Developer" />,
       status: (
         <SoftBadge variant="gradient" badgeContent="offline" color="secondary" size="xs" container />
       ),

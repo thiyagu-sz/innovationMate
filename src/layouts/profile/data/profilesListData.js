@@ -23,8 +23,8 @@ import team4 from "assets/images/team-4.jpg";
 const profilesListData = [
   {
     image: kirii,
-    name: "hacker-kirii",
-    description: "bro game center polam",
+    name: "slayer",
+    description: "ui is ready",
     action: {
       type: "internal",
       route: "/pages/profile/profile-overview",

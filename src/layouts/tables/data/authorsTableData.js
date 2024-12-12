@@ -5,16 +5,9 @@ import SoftTypography from "components/SoftTypography";
 import SoftAvatar from "components/SoftAvatar";
 import SoftBadge from "components/SoftBadge";
 
-// Images
-import team2 from "assets/images/team-2.jpg";
-import team3 from "assets/images/team-3.jpg";
-import team4 from "assets/images/team-4.jpg";
-import spprof from "assets/images/spproof.jpg";
-import kar from "assets/images/kar.jpg";
-import aru from "assets/images/arun.jpg"
-import anbupro from "assets/images/anbu.jpg"
-import  anbus from "assets/images/anbus.jpg";
-import srmf from "assets/images/srmfac.jpg"
+// Profile Image API (Placeholder)
+const randomProfileImage = (seed) => `https://randomuser.me/api/portraits/lego/${seed}.jpg`;
+
 function Guide({ image, name, email }) {
   return (
     <SoftBox display="flex" alignItems="center" px={1} py={0.5}>
@@ -50,8 +43,8 @@ function ExpertOn({ job, org }) {
 const guidesTableData = {
   columns: [
     { name: "guide", align: "left" },
-    { name: "collage", align: "center" },
-    { name: "rating", align: "center" },  // New rating column
+    { name: "college", align: "center" },
+    { name: "rating", align: "center" }, // New rating column
     { name: "expert on", align: "left" },
     { name: "status", align: "center" },
     { name: "cabin number", align: "center" },
@@ -60,24 +53,24 @@ const guidesTableData = {
 
   rows: [
     {
-      guide: <Guide image={spprof} name="Shunmuga Perumal" email="shunmugaperumal.p@vit.ac.in" />,
-      collage: (
+      guide: <Guide image={randomProfileImage(1)} name="Alex Johnson" email="alex.johnson@example.com" />,
+      college: (
         <SoftTypography variant="caption" color="secondary">
-          VIT chennai 
+          Stanford University
         </SoftTypography>
       ),
       rating: (
         <SoftTypography variant="caption" color="secondary">
           ★★★★★
         </SoftTypography>
-      ),  // New rating field
-      "expert on": <ExpertOn job="Mobile Applications" org="Development" />,
+      ),
+      "expert on": <ExpertOn job="Artificial Intelligence" org="Research" />,
       status: (
         <SoftBadge variant="gradient" badgeContent="online" color="success" size="xs" container />
       ),
       "cabin number": (
         <SoftTypography variant="caption" color="secondary" fontWeight="medium">
-          SJT 621
+          Bldg 1, Room 101
         </SoftTypography>
       ),
       meeting: (
@@ -93,24 +86,24 @@ const guidesTableData = {
       ),
     },
     {
-      guide: <Guide image={kar} name="Karthikeyan " email="pkarthikeyn@vit@.ac.in" />,
-      collage: (
+      guide: <Guide image={randomProfileImage(2)} name="Maria Smith" email="maria.smith@example.com" />,
+      college: (
         <SoftTypography variant="caption" color="secondary">
-          VIT vellore
+          Harvard University
         </SoftTypography>
       ),
       rating: (
         <SoftTypography variant="caption" color="secondary">
           ★★★★☆
         </SoftTypography>
-      ),  
-      "expert on": <ExpertOn job="Data baseManagement" org="Proffecr" />,
+      ),
+      "expert on": <ExpertOn job="Data Science" org="Lecturer" />,
       status: (
         <SoftBadge variant="gradient" badgeContent="offline" color="secondary" size="xs" container />
       ),
       "cabin number": (
         <SoftTypography variant="caption" color="secondary" fontWeight="medium">
-          SRM block7 523
+          Bldg 2, Room 202
         </SoftTypography>
       ),
       meeting: (
@@ -125,26 +118,25 @@ const guidesTableData = {
         </SoftTypography>
       ),
     },
-    
     {
-      guide: <Guide image={srmf} name="Duraisaai" email="duraisaa@srmist.edu.in" />,
-      collage: (
+      guide: <Guide image={randomProfileImage(3)} name="John Doe" email="john.doe@example.com" />,
+      college: (
         <SoftTypography variant="caption" color="secondary">
-          SRM 
+          MIT
         </SoftTypography>
       ),
       rating: (
         <SoftTypography variant="caption" color="secondary">
-          ★★★★☆
+          ★★★☆☆
         </SoftTypography>
-      ),  // New rating field
-      "expert on": <ExpertOn job="Economist" org="Developer" />,
+      ),
+      "expert on": <ExpertOn job="Quantum Computing" org="Scientist" />,
       status: (
         <SoftBadge variant="gradient" badgeContent="online" color="success" size="xs" container />
       ),
       "cabin number": (
         <SoftTypography variant="caption" color="secondary" fontWeight="medium">
-          MIT bockQ 445
+          Bldg 3, Room 303
         </SoftTypography>
       ),
       meeting: (
@@ -160,90 +152,24 @@ const guidesTableData = {
       ),
     },
     {
-      guide: <Guide image={aru} name="Arun pandian " email="arun pandian.j@vit.ac.in" />,
-      collage: (
+      guide: <Guide image={randomProfileImage(4)} name="Jane Roe" email="jane.roe@example.com" />,
+      college: (
         <SoftTypography variant="caption" color="secondary">
-          VIT vellore
+          University of Oxford
         </SoftTypography>
       ),
       rating: (
         <SoftTypography variant="caption" color="secondary">
           ★★★★★
         </SoftTypography>
-      ),  // New rating field
-      "expert on": <ExpertOn job="Data Base" org="Projects" />,
-      status: (
-        <SoftBadge variant="gradient" badgeContent="online" color="success" size="xs" container />
       ),
-      "cabin number": (
-        <SoftTypography variant="caption" color="secondary" fontWeight="medium">
-          PRP block 317 E
-        </SoftTypography>
-      ),
-      meeting: (
-        <SoftTypography
-          component="a"
-          href="#"
-          variant="caption"
-          color="secondary"
-          fontWeight="medium"
-        >
-          Request Meeting
-        </SoftTypography>
-      ),
-    },
-    {
-      guide: <Guide image={anbus} name="AnbursuKuamr" email="anbarasakumar.a@vit.ac.in" />,
-      collage: (
-        <SoftTypography variant="caption" color="secondary">
-          VIT  vellore
-        </SoftTypography>
-      ),
-      rating: (
-        <SoftTypography variant="caption" color="secondary">
-          ★★★☆☆
-        </SoftTypography>
-      ),  // New rating field
-      "expert on": <ExpertOn job="AI & ML" org="Executive" />,
+      "expert on": <ExpertOn job="Blockchain Technology" org="Consultant" />,
       status: (
         <SoftBadge variant="gradient" badgeContent="offline" color="secondary" size="xs" container />
       ),
       "cabin number": (
         <SoftTypography variant="caption" color="secondary" fontWeight="medium">
-          SJT 213
-        </SoftTypography>
-      ),
-      meeting: (
-        <SoftTypography
-          component="a"
-          href="#"
-          variant="caption"
-          color="secondary"
-          fontWeight="medium"
-        >
-          Request Meeting
-        </SoftTypography>
-      ),
-    },
-    {
-      guide: <Guide image={anbupro} name="Anduarsu" email="anbarasu.b@vit.ac.in" />,
-      collage: (
-        <SoftTypography variant="caption" color="secondary">
-          VIT vellore
-        </SoftTypography>
-      ),
-      rating: (
-        <SoftTypography variant="caption" color="secondary">
-          ★★★☆☆
-        </SoftTypography>
-      ),  // New rating field
-      "expert on": <ExpertOn job="Programming in c" org="Developer" />,
-      status: (
-        <SoftBadge variant="gradient" badgeContent="offline" color="secondary" size="xs" container />
-      ),
-      "cabin number": (
-        <SoftTypography variant="caption" color="secondary" fontWeight="medium">
-          SJT 212
+          Bldg 4, Room 404
         </SoftTypography>
       ),
       meeting: (

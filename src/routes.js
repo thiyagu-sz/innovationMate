@@ -56,7 +56,7 @@ const routes = [
     component: <EmbedWebsite />,
     noCollapse: true,
   },
-  {
+ /**  {
     type: "collapse",
     name: "Billing",
     key: "billing",
@@ -65,6 +65,7 @@ const routes = [
     component: <Billing />,
     noCollapse: true,
   },
+  */
  /** {
     type: "collapse",
     name: "Virtual Reality",

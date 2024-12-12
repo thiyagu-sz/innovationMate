@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Leaderboard</title>
+
+    <style>
+        /* Main styles */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f3f6;
+        }
+
+        /* Leaderboard container */
+        .leaderboard {
+            max-width: 600px;
+            margin: 10px auto;
+            border-radius: 12px;
+            box-shadow: 0 0 40px -10px rgba(0, 0, 0, .4);
+            background-color: #f9f9f9;
+            padding: 15px;
+        }
+
+        /* Header styles */
+        .leaderboard header {
+            background-color: #3659db;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 12px 12px 0 0;
+        }
+
+        /* Filter section */
+        .filter-section {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 15px;
+            background-color: #f1f3f6;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .filter-section label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* Profile container */
+        .leaderboard__profiles {
+            display: grid;
+            row-gap: 8px;
+        }
+
+        /* Individual profile */
+        .leaderboard__profile {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 5px 7px -1px rgba(51, 51, 51, 0.23);
+            background-color: #fff;
+            transition: transform .25s cubic-bezier(.7, .98, .86, .98);
+            position: relative;
+        }
+
+        .leaderboard__profile:hover {
+            transform: scale(1.03);
+            box-shadow: 0 9px 47px 11px rgba(51, 51, 51, 0.18);
+        }
+
+        /* Profile picture */
+        .leaderboard__picture {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        /* Profile text */
+        .leaderboard__name {
+            font-weight: 600;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .leaderboard__role,
+        .leaderboard__location {
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        /* Profile buttons */
+        .profile-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .profile-button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 12px;
+            cursor: pointer;
+            color: white;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .request-button {
+            background-color: #5b7cfa;
+        }
+
+        .message-button {
+            background-color: #35d8ac;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 480px) {
+            .leaderboard {
+                max-width: 100%;
+                margin: 10px;
+                padding: 10px;
+            }
+
+            .filter-section {
+                padding: 10px;
+            }
+
+            .leaderboard__profile {
+                flex-direction: column;
+                text-align: center;
+                padding: 15px;
+            }
+
+            .leaderboard__picture {
+                width: 70px;
+                height: 70px;
+                margin: 0 auto 10px;
+            }
+
+            .profile-buttons {
+                justify-content: center;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="leaderboard">
+    <header>
+        <h2>Student Leaderboard</h2>
+    </header>
+
+    <!-- Filter Section -->
+    <div class="filter-section">
+        <label for="locationFilter">Location:</label>
+        <select id="locationFilter" onchange="filterProfiles()">
+            <option value="all">All Locations</option>
+            <option value="New York">New York</option>
+            <option value="Los Angeles">Los Angeles</option>
+            <option value="Chicago">Chicago</option>
+            <option value="Vellore"> Vellore  </option>
+        </select>
+
+        <label for="roleFilter">Role:</label>
+        <select id="roleFilter" onchange="filterProfiles()">
+            <option value="all">All Roles</option>
+            <option value="Software Developer">Software Developer</option>
+            <option value="Data Analyst">Data Analyst</option>
+            <option value="Product Manager">Product Manager</option>
+        </select>
+    </div>
+
+    <!-- Profiles Section -->
+    <main class="leaderboard__profiles">
+        <!-- Sample Profile Entry -->
+        <article class="leaderboard__profile" data-location="New York" data-role="Software Developer">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Student Picture" class="leaderboard__picture">
+            <div>
+                <span class="leaderboard__name">John Doe</span><br>
+                <span class="leaderboard__role">Role: Software Developer</span><br>
+                <span class="leaderboard__location">Location: New York</span>
+
+                <div class="profile-buttons">
+                    <button class="profile-button request-button">Request Meeting</button>
+                    <button class="profile-button message-button">Message</button>
+                </div>
+            </div>
+        </article>
+
+        <!-- Additional profiles can be added similarly -->
+
+        <article class="leaderboard__profile" data-location="Los Angeles" data-role="Data Analyst">
+            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Student Picture" class="leaderboard__picture">
+            <div>
+                <span class="leaderboard__name">Jane Smith</span><br>
+                <span class="leaderboard__role">Role: Data Analyst</span><br>
+                <span class="leaderboard__location">Location: Los Angeles</span>
+
+                <!-- Profile buttons -->
+                <div class="profile-buttons">
+                    <button class="profile-button request-button">Request Meeting</button>
+                    <button class="profile-button message-button">Message</button>
+                </div>
+            </div>
+        </article>
+
+        <article class="leaderboard__profile" data-location="Chicago" data-role="Product Manager">
+            <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Student Picture" class="leaderboard__picture">
+            <div>
+                <span class="leaderboard__name">James Lee</span><br>
+                <span class="leaderboard__role">Role: Product Manager</span><br>
+                <span class="leaderboard__location">Location: Chicago</span>
+
+                <!-- Profile buttons -->
+                <div class="profile-buttons">
+                    <button class="profile-button request-button">Request Meeting</button>
+                    <button class="profile-button message-button">Message</button>
+                </div>
+            </div>
+        </article>
+        <article class="leaderboard__profile" data-location="New York" data-role="Software Developer">
+        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Student Picture" class="leaderboard__picture">
+        <div>
+            <span class="leaderboard__name">John Doe</span><br>
+            <span class="leaderboard__role">Role: Software Developer</span><br>
+            <span class="leaderboard__location">Location: New York</span>
+            <div class="profile-buttons">
+                <button class="profile-button request-button">Request Meeting</button>
+                <button class="profile-button message-button">Message</button>
+            </div>
+        </div>
+        </article>
+
+        <article class="leaderboard__profile" data-location="Vellore" data-role="Software Developer">
+        <img src="profilepic.png" alt="Student Picture" class="leaderboard__picture">
+        <div>
+            <span class="leaderboard__name">Thiyagu</span><br>
+            <span class="leaderboard__role">Role: Front End Developer</span><br>
+            <span class="leaderboard__location">Location: Vellore</span>
+            <div class="profile-buttons">
+                <button class="profile-button request-button">Request Meeting</button>
+                <button class="profile-button message-button">Message</button>
+            </div>
+        </div>
+        </article>
+
+
+        <article class="leaderboard__profile" data-location="Vellore" data-role="Software Developer">
+            <img src="" alt="Student Picture" class="leaderboard__picture">
+            <div>
+                <span class="leaderboard__name">Sudarsan</span><br>
+                <span class="leaderboard__role">Role: documant maker</span><br>
+                <span class="leaderboard__location">Location: Vellore</span>
+                <div class="profile-buttons">
+                    <button class="profile-button request-button">Request Meeting</button>
+                    <button class="profile-button message-button">Message</button>
+                </div>
+            </div>
+        </article>
+    </main>
+</div>
+
+<script>
+    function filterProfiles() {
+        const locationFilter = document.getElementById('locationFilter').value;
+        const roleFilter = document.getElementById('roleFilter').value;
+        const profiles = document.querySelectorAll('.leaderboard__profile');
+
+        profiles.forEach(profile => {
+            const profileLocation = profile.getAttribute('data-location');
+            const profileRole = profile.getAttribute('data-role');
+            const locationMatch = (locationFilter === 'all') || (locationFilter === profileLocation);
+            const roleMatch = (roleFilter === 'all') || (roleFilter === profileRole);
+
+            profile.style.display = (locationMatch && roleMatch) ? 'flex' : 'none';
+        });
+    }
+</script>
+
+</body>
+</html>
+

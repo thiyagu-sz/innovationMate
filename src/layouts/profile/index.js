@@ -49,6 +49,7 @@ import team1 from "assets/images/team-1.jpg";
 import team2 from "assets/images/team-2.jpg";
 import team3 from "assets/images/team-3.jpg";
 import team4 from "assets/images/team-4.jpg";
+import eproject from "assets/images/elearningproject.png";
 
 function Overview() {
   return (
@@ -107,7 +108,7 @@ function Overview() {
                   image={project1}
                   label="project #2"
                   title="modern"
-                  description="As Uber works through a huge amount of internal management turmoil."
+                  description=" 3d animation portfolio "
                   action={{
                     type: "internal",
                     route: "/pages/profile/profile-overview",
@@ -126,10 +127,10 @@ function Overview() {
               
               <Grid item xs={12} md={6} xl={3}>
                 <DefaultProjectCard
-                  image={homeDecor2}
+                  image={eproject}
                   label="project #1"
                   title="scandinavian"
-                  description="Music is something that every person has his or her own specific opinion about."
+                  description="Elearning WebSite for collage Cloud project"
                   action={{
                     type: "internal",
                     route: "/pages/profile/profile-overview",
@@ -144,26 +145,7 @@ function Overview() {
                   ]}
                 />
               </Grid>
-              <Grid item xs={12} md={6} xl={3}>
-                <DefaultProjectCard
-                  image={homeDecor3}
-                  label="project #3"
-                  title="minimalist"
-                  description="Different people have different taste, and various types of music."
-                  action={{
-                    type: "internal",
-                    route: "/pages/profile/profile-overview",
-                    color: "info",
-                    label: "view project",
-                  }}
-                  authors={[
-                    { image: team4, name: "Peterson" },
-                    { image: team3, name: "Nick Daniel" },
-                    { image: team2, name: "Ryan Milly" },
-                    { image: team1, name: "Elena Morison" },
-                  ]}
-                />
-              </Grid>
+              
               <Grid item xs={12} md={6} xl={3}>
                 <PlaceholderCard title={{ variant: "h5", text: "New project" }} outlined />
               </Grid>

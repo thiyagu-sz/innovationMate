@@ -117,7 +117,7 @@ function Header() {
                 Thiyagu
               </SoftTypography>
               <SoftTypography variant="button" color="text" fontWeight="medium">
-                developer /Founder
+                developer 
               </SoftTypography>
             </SoftBox>
           </Grid>

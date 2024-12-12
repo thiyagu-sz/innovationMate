@@ -66,7 +66,7 @@ function Overview() {
               description="As a frontend developer, I specialize in JavaScript and React.js for creating dynamic, responsive user interfaces. I also excel in WordPress development, adept at customizing themes and plugins to deliver tailored website solutions. My diverse skill set enables me to build seamless web applications that ensure a positive user experience and effectively meet client needs"
               info={{
                 fullName: "Thiyagu",
-                mobile: "9080214287",
+                mobile: "12345678910",
                 email: "thiyaguai2003@mail.com",
                 location: "india tamilnadu vellore",
               }}
